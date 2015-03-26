@@ -20,6 +20,8 @@ Menu.prototype = {
       { font: '26px Arial', fill: '#ffffff', align: 'center'}
     );
     this.instructionsText.anchor.setTo(0.5, 0.5);
+    var backgroundMusic = this.game.add.audio('background-music', 1.0, true);
+    backgroundMusic.play();
   },
   update: function() {
     if(this.game.input.activePointer.justPressed()) {

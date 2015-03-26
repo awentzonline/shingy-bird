@@ -99,6 +99,8 @@ Menu.prototype = {
       { font: '26px Arial', fill: '#ffffff', align: 'center'}
     );
     this.instructionsText.anchor.setTo(0.5, 0.5);
+    var backgroundMusic = this.game.add.audio('background-music', 1.0, true);
+    backgroundMusic.play();
   },
   update: function() {
     if(this.game.input.activePointer.justPressed()) {
@@ -195,6 +197,7 @@ Preload.prototype = {
     this.load.image('bone', 'assets/bone.png');
     this.load.image('background', 'assets/hellscape.jpg');
     this.load.bitmapFont('font', 'assets/font.png', 'assets/font.fnt');
+    this.load.audio('background-music', ['assets/background-music.mp3', 'assets/background-music.ogg']);
   },
   create: function() {
     this.asset.cropEnabled = false;

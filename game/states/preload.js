@@ -16,6 +16,7 @@ Preload.prototype = {
     this.load.image('bone', 'assets/bone.png');
     this.load.image('background', 'assets/hellscape.jpg');
     this.load.bitmapFont('font', 'assets/font.png', 'assets/font.fnt');
+    this.load.audio('background-music', ['assets/background-music.mp3', 'assets/background-music.ogg']);
   },
   create: function() {
     this.asset.cropEnabled = false;
